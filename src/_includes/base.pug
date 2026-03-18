@@ -1,6 +1,8 @@
 doctype html
 html(lang="en" data-bs-theme="dark")
   head
-    include head.pug
+    include _head.pug
     title DarkblooM's Awesome Website
-  body.container !{content}
+  body.container
+    include _components/navbar.pug
+    main !{content}
