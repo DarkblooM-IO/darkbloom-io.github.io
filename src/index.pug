@@ -2,4 +2,7 @@
 title: Home
 layout: "base.pug"
 ---
-h1 Hello World!
+div.card.shadow
+  div.card-header #[i.fa-solid.fa-message] Blog posts
+  ul.list-group.list-group-flush: each post in collections.blog
+    li.list-group-item: a(href=post.url)= post.data.title
