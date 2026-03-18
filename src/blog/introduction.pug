@@ -1,5 +1,5 @@
 ---
-title: Welcome to my blog
+title: Introduction
 ---
 
 mixin question(q)
@@ -10,6 +10,7 @@ mixin question(q)
 
 .row
   .col-lg.mb-3
+    h2 About me
     p If you don't know me, hi! I'm DarkblooM. I'm a 23 year old computer science student from France.
     p My pronouns are... uh... all of them. I really don't care.
     p My main points of interest are:
@@ -18,27 +19,18 @@ mixin question(q)
       li gaming
       li music
       li motorcycles
-    p I decided to create this blog talk about various stuff that I find interesting or funny. Maybe write some guides here and there.
     div
       img.img-fluid.rounded.shadow.w-auto(src="https://files.catbox.moe/6yrqpu.png" alt="DarkblooM profile picture")
       br
       sup.text-end.text-muted Profile picture by #[a(href="https://linktr.ee/offkair" target="_blank") OFFKAiR]
   .col-lg
     h2 Q&A
-    div.row
-      div.col-md
-        +question("Why not use an existing platform?"): p.card-text.
-          I just thought it'd be neat to have my own, that way I can make it look just how I want and I can add whatever I want to it.
-      div.col-md
-        +question("How did you build this website?"): p.card-text.
-          I use #[a(href="https://11ty.dev/" target="_blank") Build Awesome] (formerly 11ty) to generate the whole site statically, with #[a(href="https://pugjs.org/" target="_blank") Pug] for building templates, as well as #[a(href="https://getbootstrap.com/" target="_blank") Bootstrap] for UI and #[a(href="https://fontawesome.com/" target="_blank") Font Awesome] for icons.
-    div.row
-      div.col-md
-        +question("Are you on social media?")
-          p.card-text Yes!
-          a.card-link(href="https://bsky.app/profile/darkblo0m.bsky.social" target="_blank" data-bs-toggle="tooltip" data-bs-title="Bluesky"): i.fab.fa-bluesky
-          a.card-link(href="https://threads.com/@darkbloom.io" target="_blank" data-bs-toggle="tooltip" data-bs-title="Threads"): i.fab.fa-threads
-          a.card-link(href="https://youtube.com/@darkbloom_io" target="_blank" data-bs-toggle="tooltip" data-bs-title="YouTube"): i.fab.fa-youtube
-          a.card-link(href="https://reddit.com/u/darkbloom_sr" target="_blank" data-bs-toggle="tooltip" data-bs-title="Reddit"): i.fab.fa-reddit
-          a.card-link(href="https://tiktok.com/@darkbloom.io" target="_blank" data-bs-toggle="tooltip" data-bs-title="TikTok"): i.fab.fa-tiktok
-      div.col-md
+    +question("How did you build this website?"): p.card-text.
+      I use #[a(href="https://11ty.dev/" target="_blank") Build Awesome] (formerly 11ty) to generate the whole site statically, with #[a(href="https://pugjs.org/" target="_blank") Pug] for building templates, as well as #[a(href="https://getbootstrap.com/" target="_blank") Bootstrap] for UI and #[a(href="https://fontawesome.com/" target="_blank") Font Awesome] for icons.
+    +question("Are you on social media?")
+      p.card-text Yes!
+      a.card-link(href="https://bsky.app/profile/darkblo0m.bsky.social" target="_blank" data-bs-toggle="tooltip" data-bs-title="Bluesky" style="--bs-link-hover-color-rgb: 17,133,254;"): i.fab.fa-bluesky.fa-xl
+      a.card-link(href="https://threads.com/@darkbloom.io" target="_blank" data-bs-toggle="tooltip" data-bs-title="Threads" style="--bs-link-hover-color-rgb: 0,0,0;"): i.fab.fa-threads.fa-xl
+      a.card-link(href="https://youtube.com/@darkbloom_io" target="_blank" data-bs-toggle="tooltip" data-bs-title="YouTube" style="--bs-link-hover-color-rgb: 255,0,0;"): i.fab.fa-youtube.fa-xl
+      a.card-link(href="https://reddit.com/u/darkbloom_sr" target="_blank" data-bs-toggle="tooltip" data-bs-title="Reddit" style="--bs-link-hover-color-rgb: 255,69,0;"): i.fab.fa-reddit.fa-xl
+      a.card-link(href="https://tiktok.com/@darkbloom.io" target="_blank" data-bs-toggle="tooltip" data-bs-title="TikTok" style="--bs-link-hover-color-rgb: 0,0,0;"): i.fab.fa-tiktok.fa-xl
