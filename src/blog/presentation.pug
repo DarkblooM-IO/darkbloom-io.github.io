@@ -3,33 +3,40 @@ title: Welcome to my blog
 ---
 
 mixin question(q)
-  div.card.my-3(style="width: 24rem;")
+  div.card.my-3
     div.card-header: strong #[i.fa-solid.fa-message] #{q}
     div.card-body
       block
 
-p If you don't know me, hi! I'm DarkblooM. I'm a 23 year old computer science student from France.
-
-p My main points of interest are:
-ul
-  li computer science
-  li gaming
-  li music
-  li motorcycles
-
-p I decided to create this blog talk about various stuff that I find interesting or funny. Maybe write some guides here and there.
-
-h2 Q&A
-
-+question("Why not use an existing platform?"): p.card-text.
-  I just thought it'd be neat to have my own, that way I can make it look just how I want and I can add whatever I want to it.
-
-+question("Are you on social media?")
-  p.card-text Yes!
-  a.card-link(href="https://bsky.app/profile/darkblo0m.bsky.social" target="_blank"): i.fab.fa-bluesky
-  a.card-link(href="https://threads.com/@darkbloom.io" target="_blank"): i.fab.fa-threads
-  a.card-link(href="https://youtube.com/@darkbloom_io" target="_blank"): i.fab.fa-youtube
-  a.card-link(href="https://reddit.com/u/darkbloom_sr" target="_blank"): i.fab.fa-reddit
-
-+question("How did you build this website?"): p.card-text.
-  I use #[a(href="https://11ty.dev/" target="_blank") Build Awesome] (formerly 11ty) to generate the whole site statically, as well as #[a(href="https://getbootstrap.com/" target="_blank") Bootstrap] for UI and #[a(href="https://fontawesome.com/" target="_blank") Font Awesome] for icons.
+.row
+  .col-lg
+    p If you don't know me, hi! I'm DarkblooM. I'm a 23 year old computer science student from France.
+    p My pronouns are... uh... all of them. I really don't care.
+    p My main points of interest are:
+    ul
+      li computer science
+      li gaming
+      li music
+      li motorcycles
+    p.
+      I decided to create this blog talk about various stuff that I find interesting or funny.#[br]
+      Maybe write some guides here and there.
+  .col-lg
+    h2 Q&A
+    div.row
+      div.col-md
+        +question("Why not use an existing platform?"): p.card-text.
+          I just thought it'd be neat to have my own, that way I can make it look just how I want and I can add whatever I want to it.
+      div.col-md
+        +question("How did you build this website?"): p.card-text.
+          I use #[a(href="https://11ty.dev/" target="_blank") Build Awesome] (formerly 11ty) to generate the whole site statically, with #[a(href="https://pugjs.org/" target="_blank") Pug] for building templates, as well as #[a(href="https://getbootstrap.com/" target="_blank") Bootstrap] for UI and #[a(href="https://fontawesome.com/" target="_blank") Font Awesome] for icons.
+    div.row
+      div.col-md
+        +question("Are you on social media?")
+          p.card-text Yes!
+          a.card-link(href="https://bsky.app/profile/darkblo0m.bsky.social" target="_blank"): i.fab.fa-bluesky
+          a.card-link(href="https://threads.com/@darkbloom.io" target="_blank"): i.fab.fa-threads
+          a.card-link(href="https://youtube.com/@darkbloom_io" target="_blank"): i.fab.fa-youtube
+          a.card-link(href="https://reddit.com/u/darkbloom_sr" target="_blank"): i.fab.fa-reddit
+          a.card-link(href="https://tiktok.com/@darkbloom.io" target="_blank"): i.fab.fa-tiktok
+      div.col-md
