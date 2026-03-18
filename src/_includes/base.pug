@@ -2,7 +2,7 @@ doctype html
 html(lang="en" data-bs-theme="dark")
   head
     include _head.pug
-    title DarkblooM's Awesome Website
-  body.container
+    title #{title} · DarkblooM
+  body
     include _components/navbar.pug
-    main !{content}
+    main.container-fluid !{content}
