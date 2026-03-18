@@ -7,6 +7,8 @@ export default function (eleventyConfig) {
 
   eleventyConfig.addPassthroughCopy("./src/style/")
   eleventyConfig.addPassthroughCopy("./src/js/")
+  eleventyConfig.addPassthroughCopy("./src/img/")
+  eleventyConfig.addPassthroughCopy("./src/favicon.png")
 
   return {
     dir: {
