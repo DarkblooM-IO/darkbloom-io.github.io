@@ -5,5 +5,7 @@ html(lang="en" data-bs-theme="dark")
     title #{title} · DarkblooM
   body
     include _components/navbar.pug
-    main.container-fluid !{content}
+    main.container-fluid
+      | !{content}
+      include _components/theme-btn.pug
     footer: include _components/footer.pug

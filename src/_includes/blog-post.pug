@@ -6,5 +6,7 @@ html(lang="en" data-bs-theme="dark")
   body
     include _components/navbar.pug
     include _components/blog-header.pug
-    main.container !{content}
+    main.container
+      | !{content}
+      include _components/theme-btn.pug
     include _components/footer.pug
