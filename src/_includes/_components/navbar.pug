@@ -1,9 +1,9 @@
 nav.navbar.navbar-expand-md.bg-body-secondary.sticky-top.mb-3
   div.container-fluid
-    a.navbar-brand(href="/") DarkblooM's Website
+    a.navbar-brand(href="/"): img(src="/img/logo.png" alt="Site logo" data-bs-toggle="tooltip" data-bs-title="Logo from Logoipsum" height="20")
     button.navbar-toggler(type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"): span.navbar-toggler-icon
     div#navbarSupportedContent.collapse.navbar-collapse.position-relative.my-2.my-lg-0
-      button#toggleTheme.position-absolute.top-0.end-0.btn.btn-outline-primary(role="button" onclick="toggleTheme()"): i.fa-solid.fa-circle-half-stroke
+      include theme-btn.pug
       ul.navbar-nav.me-auto
         li.nav-item: a.nav-link(href="/") Home
         li.nav-item: a.nav-link(href="/blog") Blog

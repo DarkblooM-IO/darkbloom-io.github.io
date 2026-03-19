@@ -15,8 +15,8 @@ mixin question(q)
       ## About me
 
       If you don't know me, hi! I'm DarkblooM.  
-      I'm a 23 year old computer science student from France.
-      
+    p I'm a #[span#age] year old computer science student from France.
+    :markdown-it
       My pronouns are... uh... all of them. I really don't care.
       
       My main points of interest are:
@@ -42,3 +42,10 @@ mixin question(q)
       a.card-link(href="https://reddit.com/u/darkbloom_sr" data-bs-toggle="tooltip" data-bs-title="Reddit" style="--bs-link-hover-color-rgb: 255,69,0;"): i.fab.fa-reddit.fa-xl
       a.card-link(href="https://tiktok.com/@darkbloom.io" data-bs-toggle="tooltip" data-bs-title="TikTok" style="--bs-link-hover-color-rgb: 0,0,0;"): i.fab.fa-tiktok.fa-xl
       a.card-link(href="https://github.com/darkbloom-io" data-bs-toggle="tooltip" data-bs-title="GitHub" style="--bs-link-hover-color-rgb: 24,23,23;"): i.fab.fa-github.fa-xl
+script.
+  const birthDate = new Date('2002-07-07')
+  const today = new Date()
+  let age = today.getFullYear() - birthDate.getFullYear()
+  const monthDiff = today.getMonth() - birthDate.getMonth()
+  if (monthDiff < 0 || (monthDiff === 0 && today.getDate() < birthDate.getDate())) age--
+  document.querySelector("span#age").innerText = age
