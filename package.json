@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "rm -rf ./docs/*; clear; eleventy --serve",
-    "build": "rm -rf ./docs/*; eleventy"
+    "start": "bash ./build.sh --serve",
+    "build": "bash ./build.sh"
   },
   "keywords": [],
   "author": "",
