@@ -1,9 +1,10 @@
-import mermaid from 'mermaid'
+import mermaid   from 'mermaid'
 import pugPlugin from "@11ty/eleventy-plugin-pug"
-import { execSync } from 'child_process'
-import fs from 'fs'
-import path from 'path'
-import os from 'os'
+import fs        from 'fs'
+import path      from 'path'
+import os        from 'os'
+
+import { execSync }      from 'child_process'
 import { fileURLToPath } from 'url'
 
 export default function (eleventyConfig) {
