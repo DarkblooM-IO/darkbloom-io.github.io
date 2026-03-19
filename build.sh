@@ -1,3 +1,3 @@
 rm -rf ./docs/* ./docs/.*
-cp ./src/{.htaccess,robots.txt} ./docs/
+cp ./src/robots.txt ./docs/
 eleventy "$@"
