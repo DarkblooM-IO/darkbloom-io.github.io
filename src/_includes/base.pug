@@ -2,8 +2,8 @@ doctype html
 html(lang="en" data-bs-theme="dark")
   head
     include _head.pug
-    title #{title} · DarkblooM
-  body
+    title= title ? title+' · DarkblooM' : 'DarkblooM'
+  body.vh-100
     include _components/navbar.pug
     include _noscript.pug
-    main.containe !{content}
+    main.container-fluid.d-flex.flex-column.align-items-center !{content}
