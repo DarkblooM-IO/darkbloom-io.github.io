@@ -33,7 +33,9 @@ mixin question(q)
     h2 Q&A
     +question("How did you build this website?"): p.card-text.
       I use #[a(href="https://11ty.dev/") Build Awesome] (formerly 11ty) to generate the whole site statically, with #[a(href="https://pugjs.org/") Pug] for building templates, as well as #[a(href="https://getbootstrap.com/") Bootstrap] for UI and #[a(href="https://fontawesome.com/") Font Awesome] for icons.
-    +question("Where can we follow you?")
+    +question("Can I see the source code anywhere?"): p.card-text.
+      Yes, you can check out the GitHub repo #[a(href="https://github.com/DarkblooM-IO/darkbloom-io.github.io") here].
+    +question("Where can I follow you?")
       a.card-link(href="https://bsky.app/profile/darkblo0m.bsky.social" data-bs-toggle="tooltip" data-bs-title="Bluesky" style="--bs-link-hover-color-rgb: 17,133,254;"): i.fab.fa-bluesky.fa-xl
       a.card-link(href="https://threads.com/@darkbloom.io" data-bs-toggle="tooltip" data-bs-title="Threads" style="--bs-link-hover-color-rgb: 0,0,0;"): i.fab.fa-threads.fa-xl
       a.card-link(href="https://youtube.com/@darkbloom_io" data-bs-toggle="tooltip" data-bs-title="YouTube" style="--bs-link-hover-color-rgb: 255,0,0;"): i.fab.fa-youtube.fa-xl
