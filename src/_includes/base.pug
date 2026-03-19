@@ -6,10 +6,4 @@ html(lang="en" data-bs-theme="dark")
   body
     include _components/navbar.pug
     include _noscript.pug
-    main.container
-      if tags && tags.includes("blog")
-        div.mx-5
-          header: include _components/blog-post-header.pug
-          article !{content}
-      else
-        | !{content}
+    main.containe !{content}
