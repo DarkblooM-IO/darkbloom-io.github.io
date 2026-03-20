@@ -1,13 +1,37 @@
 ---
 title: Home
 layout: "base.pug"
+permalink: /index.html
 ---
-article.w-50
-  h1 Home page
-  hr
-  p Kind of empty right now I know.
-  p Here, have a cookie.
-  pre: code.
-     /)/)
-    ( . .)
-    ( づ&#127850;
+
+mixin title(text, icon)
+  header.mb-3
+    h1.border-start.border-3.ps-2.lead.fs-1 #[i.fa-solid.fa-xs(class=icon)] #{text}
+
+div.row
+  article.col-md.mb-3
+    +title("About me", "fa-user")
+    div.card: div.row.card-body
+        div.col-md.mb-3
+          h5.card-title Hi there!
+          p.card-text I'm DarkblooM #[span#pronouns.badge.rounded-pill.text-bg-secondary any/all].#[br]I'm a 23 year old computer science student from France.
+          p.card-text My main interests include:
+          ul: each elem in ["computers", "gaming", "food", "music", "motorcycles"]
+            li= elem
+          div.card
+            div.card-header.text-center My links
+            div.card-body.text-center.row
+              div
+                a.card-link(href="https://darkblo0m.bsky.social"): i.fa-xl.fa-brands.fa-bluesky
+                a.card-link(href="https://threads.com/@darkbloom.io"): i.fa-xl.fa-brands.fa-threads
+                a.card-link(href="https://youtube.com/@darkbloom_io"): i.fa-xl.fa-brands.fa-youtube
+              div.mt-3
+                a.card-link(href="https://reddit.com/u/darkbloom_sr"): i.fa-xl.fa-brands.fa-reddit
+                a.card-link(href="https://tiktok.com/@darkbloom.io"): i.fa-xl.fa-brands.fa-tiktok
+                a.card-link(href="https://github.com/darkbloom-io"): i.fa-xl.fa-brands.fa-github
+        div.col-md
+          div.card.text-bg-dark: img.card-img(src="/img/pfp.png")
+          sup Profile picture by #[a(href="https://linktr.ee/offkair") OFFKAiR]
+  article.col-md.mb-3
+    +title("My projects", "fa-code")
+    p.text-muted Needs to be filled in

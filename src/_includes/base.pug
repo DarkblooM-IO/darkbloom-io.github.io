@@ -4,6 +4,7 @@ html(lang="en" data-bs-theme="dark")
     include _head.pug
     title= title ? title+' · DarkblooM' : 'DarkblooM'
   body.vh-100
+    include _components/theme-btn.pug
     include _components/navbar.pug
     include _noscript.pug
-    main.container-fluid.d-flex.flex-column.align-items-center !{content}
+    main.container-fluid !{content}

@@ -1,16 +1,1 @@
-@import url("/style/nord.css");
-
-[data-bs-theme="dark"]  {
-  --bs-primary: var(--accent-1);
-  --bs-primary-rgb: var(--accent-1-rgb);
-
-  --bg-body-color: var(--fg-light);
-  --bs-body-bg: var(--bg-medium);
-  --bs-secondary-bg-rgb: var(--bg-dark-rgb);
-  --bs-navbar-color: var(--fg-dark);
-  --bs-navbar-hover-color: var(--bs-navbar-color);
-  --bs-link-color-rgb: var(--accent-3-rgb);
-  --bs-link-hover-color-rgb: var(--accent-4-rgb);
-
-  .navbar-brand img { filter: invert(100%); }
-}
+[data-bs-theme="dark"]  { .navbar-brand img { filter: invert(100%); } }
