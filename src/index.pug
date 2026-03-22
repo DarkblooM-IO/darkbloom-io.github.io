@@ -1,15 +1,14 @@
 ---
 title: Home
 layout: "base.pug"
-permalink: /index.html
 ---
 
 mixin title(text, icon)
   header.mb-3
-    h1.border-start.border-3.ps-2.lead.fs-1 #[i.fa-solid.fa-xs(class=icon)] #{text}
+    h1.border-start.border-3.ps-2.lead.fs-1 #[i.fas.fa-xs(class=icon)] #{text}
 
 div.row
-  article.col-md.mb-3
+  section.col-md.mb-3
     +title("About me", "fa-user")
     div.card: div.row.card-body
         div.col-md.mb-3
@@ -23,15 +22,21 @@ div.row
             div.card-body.text-center.row
               div
                 a.card-link(href="https://darkblo0m.bsky.social"): i.fa-xl.fa-brands.fa-bluesky
-                a.card-link(href="https://threads.com/@darkbloom.io"): i.fa-xl.fa-brands.fa-threads
-                a.card-link(href="https://youtube.com/@darkbloom_io"): i.fa-xl.fa-brands.fa-youtube
+                a.card-link(href="https://threads.com/@darkbloom.io"): i.fa-xl.fab.fa-threads
+                a.card-link(href="https://youtube.com/@darkbloom_io"): i.fa-xl.fab.fa-youtube
               div.mt-3
-                a.card-link(href="https://reddit.com/u/darkbloom_sr"): i.fa-xl.fa-brands.fa-reddit
-                a.card-link(href="https://tiktok.com/@darkbloom.io"): i.fa-xl.fa-brands.fa-tiktok
-                a.card-link(href="https://github.com/darkbloom-io"): i.fa-xl.fa-brands.fa-github
+                a.card-link(href="https://reddit.com/u/darkbloom_sr"): i.fa-xl.fab.fa-reddit
+                a.card-link(href="https://tiktok.com/@darkbloom.io"): i.fa-xl.fab.fa-tiktok
+                a.card-link(href="https://github.com/darkbloom-io"): i.fa-xl.fab.fa-github
         div.col-md
           div.card.text-bg-dark: img.card-img(src="/img/pfp.png")
           sup Profile picture by #[a(href="https://linktr.ee/offkair") OFFKAiR]
-  article.col-md.mb-3
+  section.col-md.mb-3
     +title("My projects", "fa-code")
-    p.text-muted Needs to be filled in
+    ul.fs-3
+      li This website #[a(href="https://github.com/DarkblooM-IO/darkbloom-io.github.io"): i.fab.fa-github]
+      li Windowed UI #[a(href="https://codepen.io/DarkblooM_IO/pen/MYjpjmd"): i.fab.fa-codepen]
+      li My Linux dotfiles #[a(href="https://github.com/DarkblooM-IO/dotfiles"): i.fab.fa-github]
+      li Bloomlang, an esoteric programming language #[a(href="https://github.com/DarkblooM-IO/bloomlang"): i.fab.fa-github]
+      li #[a(href="https://strudel.cc/") Strudel] music #[a(href="https://github.com/DarkblooM-IO/strudel"): i.fab.fa-github]
+      li Other stuff #[a(href="https://github.com/DarkblooM-IO/stuff"): i.fab.fa-github]
