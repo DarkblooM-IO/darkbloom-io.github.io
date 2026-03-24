@@ -7,7 +7,11 @@ document.querySelectorAll('a[href^="https://"], a[href^="http://"]').forEach((el
 // Make tables follow Bootstrap styling
 document.querySelectorAll('table').forEach((el) => el.classList.add("table"))
 
+// Toggle between dark and light theme
 function toggleTheme() {
   const root = document.querySelector("html")
   root.setAttribute("data-bs-theme", root.getAttribute("data-bs-theme") == "dark" ? "light" : "dark")
 }
+
+// Fill in current year
+document.querySelectorAll("span#year").forEach((el) => el.innerText = new Date().getFullYear())

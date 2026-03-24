@@ -1,0 +1,16 @@
+mixin sectionTitle(text, icon)
+  header.mb-3
+    h1.border-start.border-3.ps-2.lead.fs-1 #[i.fas.fa-xs(class="fa-"+icon)] #{text}
+
+mixin quote(author, source)
+  figure
+    blockquote.blockquote: p: i: block
+    figcaption.blockquote-footer: if author
+      | #{author}
+      if source
+        cite(title=source) , #{source}
+    else
+      | Unknown source
+
+mixin badge(id)
+  span.badge.rounded-pill.text-bg-secondary(id=id): block

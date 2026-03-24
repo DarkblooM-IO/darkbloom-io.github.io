@@ -2,18 +2,14 @@
 title: Home
 layout: "base.pug"
 ---
-
-mixin title(text, icon)
-  header.mb-3
-    h1.border-start.border-3.ps-2.lead.fs-1 #[i.fas.fa-xs(class=icon)] #{text}
-
+include _includes/_mixins.pug
 div.row
   section.col-md.mb-3
-    +title("About me", "fa-user")
+    +sectionTitle("About me", "user")
     div.card: div.row.card-body
         div.col-md.mb-3
-          h5.card-title Hi there!
-          p.card-text I'm DarkblooM #[span#pronouns.badge.rounded-pill.text-bg-secondary any/all].#[br]I'm a 23 year old computer science student from France.
+          h4.card-title Hi there!
+          p.card-text I'm DarkblooM #[+badge("pronouns") any/all].#[br]I'm a 23 year old computer science student from France.
           p.card-text My main interests include:
           ul: each elem in ["computers", "gaming", "food", "music", "motorcycles"]
             li= elem
@@ -32,7 +28,7 @@ div.row
           div.card.text-bg-dark: img.card-img(src="/img/pfp.png")
           sup Profile picture by #[a(href="https://linktr.ee/offkair") OFFKAiR]
   section.col-md.mb-3
-    +title("My projects", "fa-code")
+    +sectionTitle("My projects", "code")
     ul.fs-3
       li This website #[a(href="https://github.com/DarkblooM-IO/darkbloom-io.github.io"): i.fab.fa-github]
       li Windowed UI #[a(href="https://codepen.io/DarkblooM_IO/pen/MYjpjmd"): i.fab.fa-codepen]
