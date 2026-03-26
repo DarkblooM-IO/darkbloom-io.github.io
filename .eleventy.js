@@ -1,22 +1,22 @@
-import mermaid    from 'mermaid'
+import mermaid    from "mermaid"
 import { marked } from "marked"
 import pugPlugin  from "@11ty/eleventy-plugin-pug"
-import fs         from 'fs'
-import path       from 'path'
-import os         from 'os'
 
-import { execSync }      from 'child_process'
-import { fileURLToPath } from 'url'
+import fs                from "fs"
+import path              from "path"
+import os                from "os"
+import { execSync }      from "child_process"
+import { fileURLToPath } from "url"
 
 function parseMermaid(text) {
-  const tmpInput = path.join(os.tmpdir(), `mermaid-${Date.now()}.mmd`)
+  const tmpInput  = path.join(os.tmpdir(), `mermaid-${Date.now()}.mmd`)
   const tmpOutput = path.join(os.tmpdir(), `mermaid-${Date.now()}.svg`)
 
   fs.writeFileSync(tmpInput, text)
 
   execSync(`mmdc -i "${tmpInput}" -o "${tmpOutput}"`)
 
-  const svg = fs.readFileSync(tmpOutput, 'utf8')
+  const svg = fs.readFileSync(tmpOutput, "utf8")
 
   fs.unlinkSync(tmpInput)
   fs.unlinkSync(tmpOutput)
@@ -37,10 +37,13 @@ export default function (eleventyConfig) {
   })
 
   // Site files
-  eleventyConfig.addPassthroughCopy("./src/style/")
-  eleventyConfig.addPassthroughCopy("./src/js/")
-  eleventyConfig.addPassthroughCopy("./src/img/")
-  eleventyConfig.addPassthroughCopy("./src/favicon.png")
+  const siteFiles = [
+    "style/",
+    "js/",
+    "img/",
+    "favicon.png"
+  ]
+  for (const path of siteFiles) eleventyConfig.addPassthroughCopy(`./src/${path}`)
 
   // 11ty config
   return {

@@ -1,9 +1,23 @@
-nav.navbar.navbar-expand-md.bg-body-secondary.sticky-top.mb-3
+-
+  const navlinks = {
+    "Home":         "/",
+    "Hall of fame": "/hall-of-fame/",
+    "Credits":      "/credits/"
+  }
+
+nav.navbar.nav-underline.navbar-expand-md.bg-body-secondary.sticky-top.mb-3
   div.container-fluid
     a.navbar-brand(href="/"): img(src="/img/logo.png" alt="Site logo" height="23")
     button.navbar-toggler(type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"): span.navbar-toggler-icon
     div#navbarSupportedContent.collapse.navbar-collapse.position-relative.my-2.my-lg-0
       ul.navbar-nav.me-auto
-        li.nav-item: a.nav-link(href="/") Home
-        li.nav-item: a.nav-link(href="/hall-of-fame/") Hall of fame
-        li.nav-item: a.nav-link(href="/credits/") Credits
+        each dist,title in navlinks
+          li.nav-item
+            if dist == page.url
+              a.nav-link.active(href=dist aria-current="page")= title
+            else
+              a.nav-link(href=dist)= title
+        li.nav-item.dropdown
+          a.nav-link.dropdown-toggle(href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false") Games
+          ul.dropdown-menu: each game in collections.games
+            li: a.dropdown-item(href=game.url)= game.data.title
